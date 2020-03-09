@@ -6,7 +6,11 @@ export ZSH="/home/jfortunato/.oh-my-zsh"
 
 ZSH_THEME="jfortunato"
 
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,20 +18,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export GIT_EDITOR='vim'
 
-
 # ALIASES
 alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias reloadconfig="source ~/.zshrc"
 
 # ASDF
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-### ZPLUGIN
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-
-zplugin light zdharma/fast-syntax-highlighting
-zplugin light zsh-users/zsh-autosuggestions
-zplugin light zsh-users/zsh-completions
