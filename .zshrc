@@ -9,6 +9,7 @@ ZSH_THEME="jfortunato"
 plugins=(
   git
   zsh-autosuggestions
+  zsh-completions
   zsh-syntax-highlighting
 )
 
